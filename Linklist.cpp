@@ -51,9 +51,9 @@ void List::printList() const {
         return;
     }
 
-    cout << "List contents: ";
+    cout << "List contents: " << endl;
     while (current != nullptr) {
-        cout << current->data << " ";  // Print the data of the current node
+        cout << current->data << endl;  // Print the data of the current node
         current = current->next;  // Move to the next node
     }
     cout << endl;
