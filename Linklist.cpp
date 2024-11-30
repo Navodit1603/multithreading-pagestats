@@ -44,6 +44,15 @@ List::Node* List::back() const {
     return nullptr;
 }
 
+string List::get(Node* node){
+    if(node != nullptr){
+        return node->data;
+    }
+    else{
+        return "";
+    }
+}
+
 void List::printList() const {
     Node* current = head;
     if (current == nullptr) {

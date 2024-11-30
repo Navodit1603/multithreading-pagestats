@@ -11,8 +11,8 @@ typedef string Element;
 
 class List{
 
-private:
-
+public:
+    
     struct Node {
         Element data;
         Node* next;
@@ -20,13 +20,7 @@ private:
 
         Node(Element x);  // Constructor for Node
     };
-    
-    int num_elements;  // Tracks the number of elements in the list
-    Node* head;  // Pointer to the first element
-    Node* tail;  // Pointer to the last element
-    
 
-public:
     List();   // Constructor for List
 
     ~List();  // Destructor for List
@@ -45,6 +39,8 @@ public:
     // Returns the last Node in this List.
     Node* back() const;
 
+    string get(Node* node);
+
     void printList() const;  // Prints all elements in the list from head to tail
 
     // Manipulation procedures -------------------------------------------------
@@ -56,6 +52,14 @@ public:
     // insert()
     // Inserts a new element at the end of the List.
     void insert(Element x);
+
+private:
+
+    
+    int num_elements;  // Tracks the number of elements in the list
+    Node* head;  // Pointer to the first element
+    Node* tail;  // Pointer to the last element
+    
 };
 
 #endif // LINKLIST_H
