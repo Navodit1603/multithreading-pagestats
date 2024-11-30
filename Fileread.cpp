@@ -2,7 +2,7 @@
 #include <fstream>
 #include <string>
 #include <cctype>  // For ispunct and isspace
-#include "Linklist.h"
+#include "Fileread.h"
 
 using namespace std;
 
@@ -35,20 +35,4 @@ void readFileToList(const string& filename, List& wordList) {
     }
 
     file.close();  // Close the file
-}
-
-int main(int argc, char* argv[]) {
-    List wordList;  // Create a linked list to store words
-
-    // File name that contains the sentences
-    string filename = argv[1];
-    //cout << filename << endl;
-    // Read words from the file and insert them into the list
-    readFileToList(filename, wordList);
-
-    // Print the contents of the list
-    cout << "Words in the list:" << endl;
-    wordList.printList();
-
-    return 0;
 }

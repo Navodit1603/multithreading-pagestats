@@ -1,6 +1,10 @@
 #include<iostream>
 #include<string>
 
+
+#ifndef LINKLIST_H
+#define LINKLIST_H
+
 using namespace std;
 
 typedef string Element;
@@ -53,3 +57,5 @@ public:
     // Inserts a new element at the end of the List.
     void insert(Element x);
 };
+
+#endif // LINKLIST_H
