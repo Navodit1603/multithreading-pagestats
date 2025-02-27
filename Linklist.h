@@ -53,6 +53,10 @@ public:
     // Inserts a new element at the end of the List.
     void insert(Element x);
 
+    // merge()
+    // Merges a list y at the end of the list x.
+    void merge(List& x, List& y);
+
 private:
 
     

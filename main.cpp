@@ -33,7 +33,18 @@ int regular(string filename){
 
 
 int main(int argc, char* argv[]) {
+    if(argc != 2){
+        throw std::invalid_argument("Not enough arguments provided to program");
+    }
     string filename = argv[1];
     regular(filename);
+
+    List wordList;
+    int numThreads = 4;  // Adjust based on system capabilities
+
+    threadReadFileToList(filename, wordList, numThreads);
+
+    wordList.printList();  // Assuming List has a print function
+
     return 0;
 }

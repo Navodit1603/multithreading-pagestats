@@ -41,5 +41,23 @@ int main() {
         cout << "List is empty, no back element." << endl;
     }
 
+    List x;
+    List y;
+
+    x.insert("a");
+    x.insert("b");
+    x.insert("c");
+
+    y.insert("d");
+    y.insert("e");
+    y.insert("f");
+
+    x.merge(x, y);
+
+    x.printList();
+    cout << x.length() << endl;
+
+
+
     return 0;
 }

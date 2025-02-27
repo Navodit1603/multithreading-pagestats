@@ -96,3 +96,22 @@ void List::insert(Element x) {
     }
     num_elements++;
 }
+
+// Merge list y at the end of list x
+void List::merge(List& x, List& y) {
+    if (y.head == nullptr) return; // If y is empty, do nothing
+    if (x.head == nullptr) { // If x is empty, just assign y to x
+        x.head = y.head;
+        x.tail = y.tail;
+    } else {
+        x.tail->next = y.head;
+        y.head->prev = x.tail;
+        x.tail = y.tail;
+    }
+    x.num_elements += y.num_elements; // Update element count
+
+    // Clear y
+    y.head = nullptr;
+    y.tail = nullptr;
+    y.num_elements = 0;
+}

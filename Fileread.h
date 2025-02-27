@@ -13,4 +13,6 @@ std::string cleanWord(const std::string& word);
 // Reads sentences from a file and inserts cleaned words into the linked list.
 void readFileToList(const std::string& filename, List& wordList);
 
+void threadReadFileToList(const string& filename, List& wordList, int numThreads);
+
 #endif // FILE_READER_H
